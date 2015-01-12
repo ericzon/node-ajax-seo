@@ -1,0 +1,16 @@
+{
+  "name": "node-ajax-seo",
+  "version": "1.0.0",
+  "description": "It deals with the most popular crawlers, redirecting them to static directory and serving fresh pages to human users.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "ajax",
+    "seo"
+  ],
+  "author": "Eric Lara A. <ericzon@gmail.com> && Santi Pérez F. <santiperezfernandez@gmail.com>",
+  "license": "ISC"
+}
