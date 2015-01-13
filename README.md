@@ -52,7 +52,7 @@ Add unit tests for any new or changed functionality. Lint and test your code.
 
 ## Authors
 
-[Eric Lara](https://www.twitter.com/EricLaraAmat) and [Santi Pérez](https://www.twitter.com/SantiPrzF), supported by [Ondho](http://www.ondho.com).
+[Eric Lara](https://www.twitter.com/EricLaraAmat) and [Santi Pérez](https://www.twitter.com/SantiPrzF), powered by [Ondho](http://www.ondho.com).
 
 ## License
 
