@@ -45,14 +45,16 @@ It deals with the most popular crawlers, redirecting them to static directory an
 In lieu of a formal styleguide, take care to maintain the existing coding style.
 Add unit tests for any new or changed functionality. Lint and test your code.
 
-## Author
+## Authors
 
-[Eric Lara](https://www.twitter.com/EricLaraAmat), supported by [Ondho](http://www.ondho.com).
-[Santi Pérez](https://www.twitter.com/SantiPrzF), supported by [Ondho](http://www.ondho.com).
+[Eric Lara](https://www.twitter.com/EricLaraAmat) and [Santi Pérez](https://www.twitter.com/SantiPrzF), supported by [Ondho](http://www.ondho.com).
 
 ## License
 
   TODO
+  
 ## Release History
 
-* 1.0.0 Initial commit with contributors
+* 1.1.1 Little fix.
+* 1.1.0 Add basic Readme.md and first lib version.
+* 1.0.0 Initial commit with contributors.
