@@ -1,7 +1,7 @@
 node-ajax-seo
 =============
 
-Simple node plugin that deals with the most popular crawlers, redirecting them to static directory and serving fresh pages to human users. You must to specify where do you have your sn
+Simple node plugin that deals with the most popular crawlers, redirecting them to static directory and serving fresh pages to human users. **It doesn't generate your snapshots.**
 
 ## Installation
 
