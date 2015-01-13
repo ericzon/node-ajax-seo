@@ -56,11 +56,11 @@ Add unit tests for any new or changed functionality. Lint and test your code.
 
 ## License
 
-  TODO
+MIT
   
 ## Release History
 
-* 1.1.0 Update json config to let customize some options doing it suitable for general purposes.
+* 1.0.0 Update json config to let customize some options doing it suitable for general purposes.
 * 0.1.0 Add basic Readme.md and first lib version.
 * 0.0.0 Initial commit with contributors.
 
