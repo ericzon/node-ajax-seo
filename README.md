@@ -35,7 +35,8 @@ Simple node plugin that deals with the most popular crawlers, redirecting them t
 	                url: "/",
 	                file: "home.html"									// the url basepath is an special case
 	            }
-	        }
+	        },
+        	debug: false												// false by default
 	    };
 
 	    ajaxSeo.dealWithAjax(siteConfig, req, res, next);
@@ -60,6 +61,7 @@ MIT
   
 ## Release History
 
+* 1.0.1 Add basic debug option.
 * 1.0.0 Update json config to let customize some options doing it suitable for general purposes.
 * 0.1.0 Add basic Readme.md and first lib version.
 * 0.0.0 Initial commit with contributors.
