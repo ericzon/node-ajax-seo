@@ -39,7 +39,20 @@ Simple node plugin that deals with the most popular crawlers, redirecting them t
         	debug: false												// false by default
 	    };
 
-	    ajaxSeo.dealWithAjax(siteConfig, req, res, next);
+	    ajaxSeo.dealWithAjax(siteConfig, req, res, next, function cbk(err) {
+	        if (err) {
+	            console.log(err);
+
+	            // if we don't have snapshot, we can serve 404 page, log miss request into DB, send a mail... whatevevr,
+	            // but the best option in this case is to generate it and serve it on-the-fly (WIP).
+	            console.log(siteConfig.appPrefix+"We serve the  default file caused by the inexistence of the requested one.");
+	            //res.status(err.status).end();
+	            res.sendfile(path.join(siteConfig.staticPages.path,siteConfig.staticPages.basePath.file));
+	        }
+	        else {
+	            console.log(siteConfig.appPrefix+'Sent:', path.join(filePath,fragment));
+	        }
+	    });
 	});
   
 ## Tests
@@ -59,13 +72,6 @@ Add unit tests for any new or changed functionality. Lint and test your code.
 
 MIT
   
-## Release History
-
-* 1.0.1 Add basic debug option.
-* 1.0.0 Update json config to let customize some options doing it suitable for general purposes.
-* 0.1.0 Add basic Readme.md and first lib version.
-* 0.0.0 Initial commit with contributors.
-
 ## Roadmap
 
 * connect with static page generator (WIP)
