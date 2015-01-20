@@ -1,7 +1,9 @@
 node-ajax-seo
 =============
 
-Simple node plugin that deals with the most popular crawlers, redirecting them to static directory and serving fresh pages to human users. **It doesn't generate your snapshots.**
+Simple node plugin that deals with the most popular crawlers (Google, Facebook, Twitter, Baidu, LinkedIn), redirecting them to static snapshots while serves fresh pages to human users. **It doesn't generate your snapshots, only routes.** For that sort of things we have [some other nice modules](https://www.github.com/ericzon/node-ajax-printer) ;-)
+
+[npmjs page:](https://www.npmjs.com/package/node-ajax-seo)
 
 ## Installation
 
@@ -74,5 +76,5 @@ MIT
   
 ## Roadmap
 
-* connect with static page generator (WIP)
+* Connect with [node-ajax-printer](https://www.github.com/ericzon/node-ajax-printer) (WIP).
 
