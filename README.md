@@ -13,39 +13,39 @@ Simple node plugin that deals with the most popular crawlers (Google, Facebook, 
 
   Options:
 
-		-ajaxCondition.pattern    (regex|string) regex condition (better choice this) or typical "if condition" as string to delimite non-ajax pages.
+	-nonAjaxCondition    (regex|string) regex condition (better choice this) or typical "if condition" as string to delimite non-ajax pages.
+										For example: 
+										/((^\/admin)|(^\/api)|(\.)|(^\/$))/ 
+										Same result as:
+										"(req.url.indexOf('/admin') == -1 && req.url.indexOf('/api') == -1 && req.url.indexOf('.') == -1 && req.url != '/')"
 
-		-indexPath    (string) path to your main angular .html by default.
+	-ajaxPath    (string) path to your main SPA .html by default.
 
     -staticPages.path    (string) path to your static files.
 
     -staticPages.separator    (string) in your static snapshots, filenames contain some token replacing "/" path ("[---]" by default).
 
-    -staticPages.basePath.url    (string) basepath is an special case: "when path is X, serve file Y".
+    -staticPages.basePath.url    (string) basepath is an special case: "when path is X, serve file Y" ("/" by default).
 
-    -staticPages.basePath.file    (string) 
+    -staticPages.basePath.file    (string) ("index.html" by default). 
 
   	-debug		(boolean) Enables debug messages (false by default).
 
 ## Examples
 ```javascript
+
 	var ajaxSeo = require("node-ajax-seo");
 ```
 Minimal config:
 ```javascript
-    var siteConfig = {
-	        ajaxCondition:{
-	            toEval: "(req.url.indexOf('.') > -1 || req.url == '/' || req.url.indexOf('/admin') > -1)"
-	        },
-	        indexPath: path.join(__dirname, 'assets', 'index.html'),
-	        staticPages: {
-	            path: path.join(__dirname, 'assets', 'dist', 'static'),
-	            basePath: {
-	                url: "/",
-	                file: "home.html"
-	            }
-	        }
-	    };
+
+	var siteConfig = {
+        nonAjaxCondition: /((^\/admin)|(^\/api)|(\.)|(^\/$))/,
+        ajaxPath: path.join(__dirname, 'assets', 'index.html'),
+        staticPages: {
+            path: path.join(__dirname, 'assets', 'dist', 'static'),
+        }
+    };
 
     ajaxSeo.dealWithAjax(siteConfig, req, res, next, function cbk(err) {
         if (err) {
@@ -71,11 +71,8 @@ Minimal config:
 	     **/
 
 	    var siteConfig = {
-	        ajaxCondition:{
-	            pattern: /((^\/admin)|(^\/api)|(\.)|(^\/$))/
-	            //toEval: "(req.url.indexOf('.') > -1 || req.url == '/' || req.url.indexOf('/admin') > -1)"
-	        },
-	        indexPath: path.join(__dirname, 'assets', 'index.html'),
+	        nonAjaxCondition: /((^\/admin)|(^\/api)|(\.)|(^\/$))/,
+	        ajaxPath: path.join(__dirname, 'assets', 'index.html'),
 	        staticPages: {
 	            path: path.join(__dirname, 'assets', 'dist', 'static'),
 	            separator: "[---]",
@@ -84,7 +81,7 @@ Minimal config:
 	                file: "home.html"
 	            }
 	        },
-        	debug: false												// false by default
+	        debug: false
 	    };
 
 	    ajaxSeo.dealWithAjax(siteConfig, req, res, next, function cbk(err) {
