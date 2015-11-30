@@ -1,3 +1,7 @@
+## 1.2.1 (2015-11-30)
+
+Add Flipboard to crawler set.
+
 ## 1.2.0 (2015-01-14)
 
 Add ending process callback customizable from dev's side.
