@@ -1,6 +1,6 @@
 {
   "name": "node-ajax-seo",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "It deals with the most popular crawlers, redirecting them to static directory and serving fresh pages to human users.",
   "main": "index.js",
   "scripts": {

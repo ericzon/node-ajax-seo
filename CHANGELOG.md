@@ -1,3 +1,7 @@
+## 1.2.3 (2016-01-13)
+
+Add Bing to crawler whitelist.
+
 ## 1.2.2 (2015-12-02)
 
 Add Whatsapp to crawler whitelist.
