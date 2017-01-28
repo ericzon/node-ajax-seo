@@ -1,6 +1,6 @@
 {
   "name": "node-ajax-seo",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "It deals with the most popular crawlers (Google, Twitter, Fb, LinkedIn, ...) redirecting them to static files but serving fresh pages to human users.",
   "main": "index.js",
   "scripts": {

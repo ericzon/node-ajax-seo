@@ -1,3 +1,9 @@
+## 1.4.0 (2017-01-28)
+
+Add woorank & some extra Alexa bot + cleaning some code
+
+## ...
+
 ## 1.2.3 (2016-01-13)
 
 Add Bing to crawler whitelist.
