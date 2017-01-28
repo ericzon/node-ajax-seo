@@ -13,13 +13,14 @@ Simple node plugin that deals with the most popular crawlers (Google, Facebook, 
 
   Options:
 
-	-nonAjaxCondition    (regex|string) regex condition (better choice this) or typical "if condition" as string to delimite non-ajax pages.
-										For example: 
-										/((^\/admin)|(^\/api)|(\.)|(^\/$))/ 
-										Same result as:
-										"(req.url.indexOf('/admin') == -1 && req.url.indexOf('/api') == -1 && req.url.indexOf('.') == -1 && req.url != '/')"
+    -nonAjaxCondition    (regex|string) regex condition (better choice this) or typical "if condition" as string to delimite non-ajax pages.
+    
+    For example: 
+	/((^\/admin)|(^\/api)|(\.)|(^\/$))/ 
+    Same result as:
+        "(req.url.indexOf('/admin') == -1 && req.url.indexOf('/api') == -1 && req.url.indexOf('.') == -1 && req.url != '/')"
 
-	-ajaxPath    (string) path to your main SPA .html by default.
+    -ajaxPath    (string) path to your main SPA .html by default.
 
     -staticPages.path    (string) path to your static files.
 
@@ -29,7 +30,7 @@ Simple node plugin that deals with the most popular crawlers (Google, Facebook, 
 
     -staticPages.basePath.file    (string) ("index.html" by default). 
 
-  	-debug		(boolean) Enables debug messages (false by default).
+    -debug		(boolean) Enables debug messages (false by default).
 
 ## Examples
 ```javascript
